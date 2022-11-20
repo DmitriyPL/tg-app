@@ -1,7 +1,7 @@
 import "./ProductItem.css";
 import { Button } from "../Button/Button";
 
-export const ProductItem = ( { product, className, onAdd } ) => {
+export const ProductItem = ( {product, className, onAdd}) => {
 
     const onAddHandler = () => {
         onAdd(product);
