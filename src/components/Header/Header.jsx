@@ -1,3 +1,4 @@
+import "./Header.css";
 import { useTelegram } from "../../hooks/useTelegram.js";
 
 export const Header = () => {
