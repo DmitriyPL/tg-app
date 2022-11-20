@@ -4,6 +4,9 @@ import { useEffect } from "react";
 
 import { Header } from './components/Header/Header';
 import { useTelegram } from "./hooks/useTelegram.js";
+import { Route, Routes } from "react-router-dom";
+import { ProductList } from './components/ProductList/ProductList';
+import { Form } from './components/Form/Form';
 
 function App() {
 
@@ -16,9 +19,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className='togglebutton'>
-        <button onClick={onToggleButton}>toggle</button>
-      </div>
+      <Routes>
+        <Route index element={ <ProductList /> } />
+        <Route path={'form'} element={ <Form /> } />
+      </Routes>
     </div>
   );
 }
